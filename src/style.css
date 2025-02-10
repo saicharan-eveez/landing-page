@@ -580,7 +580,7 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.office-box svg {
+.office-box svg {git config --global user.name "your Name"
     font-size: 2rem;
     color: #ff6600;
     margin-right: 1rem;
