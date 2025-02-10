@@ -1,6 +1,6 @@
 import React from 'react';
 import HeroImage from '../assets/Images/Home.png'; // Import background image
-import '../styles.css'; // Import custom CSS file
+import '../style.css'; // Import custom CSS file
 
 const Hero = () => {
     return (
