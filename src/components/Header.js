@@ -1,35 +1,44 @@
-import React from 'react';
-import logo from '../assets/Images/logo.svg'; // Logo import
+import React, { useState } from 'react';
+import logo from '../assets/Images/logo.svg';
+import '../style.css'; // Create this CSS file for custom styles
 
 const Header = () => {
-    return (
-        <header className="navbar navbar-expand-lg navbar-dark fixed-top">
-            <div className="container">
-                <a className="navbar-brand" href="#home">
-                    <img src={logo} alt="Logo" height="50" />
-                    <span className="brand-name">Assets91</span> {/* Added text beside the logo */}
-                </a>
-                <button
-                    className="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span className="navbar-toggler-icon"></span>
-                </button>
+    const [isOpen, setIsOpen] = useState(false);
 
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li className="nav-item"><a className="nav-link" href="#home">Home</a></li>
-                        <li className="nav-item"><a className="nav-link" href="#about">About</a></li>
-                        <li className="nav-item"><a className="nav-link" href="#contact-us">Contact Us</a></li>
-                    </ul>
+    const toggleNavbar = () => {
+        setIsOpen(!isOpen);
+    };
+
+    return (
+        <>
+            <header className="navbar navbar-expand-lg navbar-light bg-white fixed-top custom-header">
+                <div className="container">
+                    <a className="navbar-brand d-flex align-items-center" href="#home">
+                        <img src={logo} alt="Logo" height="50" className="me-2" />
+                        <span className="brand-text">Assets91</span>
+                    </a>
+                    <button
+                        className="navbar-toggler"
+                        type="button"
+                        onClick={toggleNavbar}
+                        aria-expanded={isOpen}
+                        aria-label="Toggle navigation"
+                    >
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div className={`collapse navbar-collapse justify-content-end ${isOpen ? 'show' : ''}`} id="navbarNav">
+                        <ul className="navbar-nav gap-4">
+                            <li className="nav-item"><a className="nav-link" href="#home">Home</a></li>
+                            <li className="nav-item"><a className="nav-link" href="#about">About</a></li>
+                            <li className="nav-item"><a className="nav-link" href="#contact-us">Contact Us</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </header>
+            </header>
+            {/* Add a spacer div to prevent content overlap */}
+            <div className="header-spacer"></div>
+        </>
     );
 };
 
