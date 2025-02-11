@@ -1,48 +1,23 @@
-// src/components/Footer.js
-import React from "react";
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
-import logo from "../assets/Images/logo.png"; // Ensure the logo is in the correct path
+import React from 'react';
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'; // Import icons
+
+import logo from '../assets/Images/logo.svg'; // Import your logo
 
 const Footer = () => {
     return (
-        <footer className="footer">
-            <div className="container">
-                <div className="footer-grid">
-                    {/* Left - Company Info */}
+        <footer className="footer-section">
+            <div className="container text-center">
+                <div className="footer-content">
                     <div className="footer-logo">
-                        <img src={logo} alt="EVeez Logo" className="logo" />
-                        <p className="footer-about">
-                            EVeez is revolutionizing electric bike subscriptions with zero down payment, flexible plans, and end-to-end service support.
-                        </p>
+                        <img src={logo} alt="EVeez Logo" className="footer-logo-img" />
                     </div>
-
-                    {/* Middle - Quick Links */}
-                    <div className="footer-links">
-                        <h3>Quick Links</h3>
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#features">Features</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-
-                    {/* Right - Social Media */}
-                    <div className="footer-social">
-                        <h3>Follow Us</h3>
-                        <div className="social-icons">
-                            <a href="https://linkedin.com/company/eveez" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-                            <a href="https://twitter.com/eveez" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
-                            <a href="https://instagram.com/eveez" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-                            <a href="https://facebook.com/eveez" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
-                        </div>
+                    <div className="footer-contact-info">
+                        <p><FaPhoneAlt className="footer-icon" /> Phone: +917807702595</p>
+                        <p><FaEnvelope className="footer-icon" /> Email: info@assets91.com</p>
+                        <p><FaMapMarkerAlt className="footer-icon" /> Address: Ground Floor, 886/T-13, Ward No. 8, Mehrauli, New Delhi, South Delhi, Delhi 110030.</p>
                     </div>
                 </div>
-
-                {/* Bottom - Copyright */}
-                <div className="footer-bottom">
-                    <p>© {new Date().getFullYear()} EVeez. All rights reserved.</p>
-                </div>
+                <p className="footer-copyright">&copy; 2025 EVeez. All Rights Reserved.</p>
             </div>
         </footer>
     );

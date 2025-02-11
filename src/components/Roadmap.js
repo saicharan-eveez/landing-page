@@ -1,36 +1,29 @@
-// src/components/Roadmap.js
-import React from "react";
-import step1 from "../assets/Images/Step 1.svg";
-import step2 from "../assets/Images/Step 2.svg";
-import step3 from "../assets/Images/Step 3.svg";
-import step4 from "../assets/Images/Step 4.svg";
-import step5 from "../assets/Images/Step 5.svg";
+import React from 'react';
+import { FaUserCheck, FaBicycle, FaFileContract, FaExchangeAlt, FaMoneyBillWave } from 'react-icons/fa';
+import '../style.css'; // Import custom CSS for the roadmap animation
 
-const Roadmap = () => {
-    const steps = [
-        { img: step1, title: "BUY YOUR EVEEZ FRANCHISE", desc: "Start your business with a proven model." },
-        { img: step2, title: "CHOOSE YOUR IDEAL LOCATION", desc: "Find the perfect spot that suits your vision." },
-        { img: step3, title: "LAUNCH OPERATIONS", desc: "Get started with everything in place." },
-        { img: step4, title: "LEADS FLOW AUTOMATICALLY", desc: "CRM integration ensures seamless customer management." },
-        { img: step5, title: "ENJOY HIGH ROI", desc: "Reap the rewards of a thriving business." },
+const BusinessPartner = () => {
+    const roadmapSteps = [
+        { icon: <FaUserCheck />, text: 'Join the Assets91 Business Partner Program by signing the agreement.' },
+        { icon: <FaBicycle />, text: 'Buy eBikes from Assets91 trusted OEM partners.' },
+        { icon: <FaFileContract />, text: 'Lease the eBikes to Assets91 for a period of 3 years.' },
+        { icon: <FaExchangeAlt />, text: 'Assets91 deploys your eBikes to its trusted Brand Partners on Subscriptions.' },
+        { icon: <FaMoneyBillWave />, text: 'Get Assured Monthly Returns for 3 years.' }
     ];
 
     return (
-        <section id="roadmap" className="roadmap-section">
+        <section id="business-partner" className="business-partner-section">
             <div className="container text-center">
-                <h2 className="display-4 text-orange">Join EVeez - Roadmap</h2>
-                <div className="grid-container">
-                    {steps.map((step, index) => (
-                        <div key={index} className="roadmap-item" style={{ animationDelay: `${index * 200}ms` }}>
-                            <div className="roadmap-card">
-                                <div className="icon-wrapper">
-                                    <img src={step.img} alt={step.title} className="roadmap-icon" />
-                                </div>
+                <h2 className="section-title">Business Partner Program</h2>
+                <p className="section-subtitle">Join our exclusive business partner program and earn assured returns.</p>
+
+                <div className="roadmap">
+                    {roadmapSteps.map((step, index) => (
+                        <div key={index} className={`roadmap-step step-${index + 1}`}>
+                            <div className="roadmap-box">
+                                <div className="roadmap-icon">{step.icon}</div>
                             </div>
-                            <div className="text-center mt-4">
-                                <h3 className="step-title">{step.title}</h3>
-                                <p className="step-desc">{step.desc}</p>
-                            </div>
+                            <p>{step.text}</p>
                         </div>
                     ))}
                 </div>
@@ -39,4 +32,4 @@ const Roadmap = () => {
     );
 };
 
-export default Roadmap;
+export default BusinessPartner;

@@ -1,13 +1,13 @@
-// src/components/Header.js
 import React from 'react';
-import logo from '../assets/Images/logo.png'; // Ensure you have your logo in assets/images
+import logo from '../assets/Images/logo.svg'; // Logo import
 
 const Header = () => {
     return (
         <header className="navbar navbar-expand-lg navbar-dark fixed-top">
             <div className="container">
                 <a className="navbar-brand" href="#home">
-                    <img src={logo} alt="EVeez Logo" height="50"/>
+                    <img src={logo} alt="Logo" height="50" />
+                    <span className="brand-name">Assets91</span> {/* Added text beside the logo */}
                 </a>
                 <button
                     className="navbar-toggler"
@@ -25,7 +25,7 @@ const Header = () => {
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item"><a className="nav-link" href="#home">Home</a></li>
                         <li className="nav-item"><a className="nav-link" href="#about">About</a></li>
-                        <li className="nav-item"><a className="nav-link" href="#contact">ContactUs</a></li>
+                        <li className="nav-item"><a className="nav-link" href="#contact-us">Contact Us</a></li>
                     </ul>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import React from 'react';
-import HeroImage from '../assets/Images/Home.png'; // Import background image
-import '../style.css'; // Import custom CSS file
+import HeroImage from '../assets/Images/Home.png';
+import '../style.css';
 
 const Hero = () => {
     return (
@@ -12,9 +12,9 @@ const Hero = () => {
             <div className="hero-overlay">
                 <div className="container h-100">
                     <div className="row h-100 align-items-center">
-                        <div className="col-lg-6 col-md-8 col-12">
+                        <div className="col-lg-6 col-md-8 col-12 text-center text-md-start">
                             <h1 className="hero-title">
-                                Welcome to <span className="brand-name">EVeez</span>
+                                Welcome to <span className="brand-name">Assets91</span>
                             </h1>
                             <p className="hero-text">
                                 Building India’s Largest EV Subscription Platform.

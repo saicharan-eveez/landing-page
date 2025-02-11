@@ -1,45 +1,42 @@
-// src/components/Advantage.js
 import React from 'react';
-import { FaBicycle, FaTools, FaSatelliteDish, FaShieldAlt } from 'react-icons/fa';
+import { FaWrench, FaLocationArrow, FaShieldAlt } from 'react-icons/fa';
+import '../style.css';  // Custom CSS for styling
 
-const Advantage = () => {
+const WhyChoose = () => {
+    const features = [
+        {
+            icon: <FaWrench />,
+            title: "Service & Support",
+            description: "Regular free service, consumables free of cost, and breakdown support."
+        },
+        {
+            icon: <FaLocationArrow />,
+            title: "IoT",
+            description: "GPS tracking, Geo Fencing, and Battery level."
+        },
+        {
+            icon: <FaShieldAlt />,
+            title: "Insurance",
+            description: "Theft and damages covered."
+        }
+    ];
+
     return (
-        <section id="advantages" className="advantages-section">
+        <section id="why-choose" className="why-choose-section">
             <div className="container text-center">
-                <h2 className="display-4 text-orange">Why Choose EVeez?</h2>
-                <div className="row mt-4">
-                    <div className="col-md-3">
-                        <div className="advantage-card">
-                            <FaBicycle className="advantage-icon" />
-                            <h4>eBike Subscription</h4>
-                            <p>No Down Payment & Full Flexibility to stop and start subscription.</p>
+                <h2 className="section-title">Why Choose Assets91?</h2>
+                <div className="features">
+                    {features.map((feature, index) => (
+                        <div key={index} className="feature-card">
+                            <div className="feature-icon">{feature.icon}</div>
+                            <h3>{feature.title}</h3>
+                            <p>{feature.description}</p>
                         </div>
-                    </div>
-                    <div className="col-md-3">
-                        <div className="advantage-card">
-                            <FaTools className="advantage-icon" />
-                            <h4>Service & Support</h4>
-                            <p>Regular free service, consumables free of cost, and breakdown support.</p>
-                        </div>
-                    </div>
-                    <div className="col-md-3">
-                        <div className="advantage-card">
-                            <FaSatelliteDish className="advantage-icon" />
-                            <h4>IoT</h4>
-                            <p>GPS tracking, Geo Fencing, and Battery level monitoring.</p>
-                        </div>
-                    </div>
-                    <div className="col-md-3">
-                        <div className="advantage-card">
-                            <FaShieldAlt className="advantage-icon" />
-                            <h4>Insurance</h4>
-                            <p>Coverage for theft and damages.</p>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </section>
     );
 };
 
-export default Advantage;
+export default WhyChoose;

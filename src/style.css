@@ -1,924 +1,821 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Poppins:wght@300&display=swap');
-
-/* === Global Styles === */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #F4F4F4; /* Ash Grey */
-    color: #000000; /* Black */
-    margin: 0;
-    padding: 0;
+/* Enable smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
 }
 
-/* === Header === */
-/* === Header/Navbar Styles === */
+
 header {
-    background-color: white; /* White background for header */
-    padding-top: 30px; /* Adds 30px padding on top */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-}
-
-.navbar {
-    background-color: #ffffff !important; /* White Navbar */
-    padding: 15px 20px;
-    /*border-radius: 10px;*/ /* Slightly rounded corners for a modern look */
+    background-color: #ffffff; /* Black */
+    padding: 15px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-brand img {
-    height: 50px; /* Adjust logo size */
+    height: 70px;
+}
+.brand-name {
+    font-family: 'Catchy Mager', sans-serif;
+    font-size: 1.8rem; /* Adjust the size as needed */
+    color: #C5C5C5; /* Change color if needed */
+    margin-left: 10px; /* Space between logo and text */
+    font-weight: bold; /* Optional: You can make it bold */
+}
+
+/* Navbar adjustments */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    color: #C5C5C5;
+    margin-right: 20px; /* Adds gap between menu items */
+}
+
+.nav-link:hover {
+    color: #FFD700; /* Optional: Adds hover effect */
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-color: #C5C5C5; /* Silver */
+    border-radius: 5px;
 }
 
 .navbar-nav .nav-link {
-    color: #3c3737 !important;
-    font-weight: bold;
+    color: #C5C5C5; /* Silver */
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 15px;
     transition: color 0.3s ease-in-out;
 }
 
-.navbar-nav .nav-link:hover {
-    color: #FF6600 !important; /* Orange hover effect */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #7C7C7C; /* Boulder */
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .navbar {
+@media (max-width: 991px) {
+    .navbar-nav {
+        background-color: #060606; /* Black */
         padding: 10px;
     }
 
-    .navbar-brand img {
-        height: 40px; /* Adjust for smaller screens */
+    .navbar-nav .nav-link {
+        padding: 10px;
+        text-align: center;
     }
 }
-
-
-
-
-/* === Header/Navbar Styles === */
-/*
-.navbar {
-    background-color: white !important; !* White Navbar *!
-    padding: 15px 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); !* Optional shadow *!
-}
-
-.navbar-brand img {
-    height: 50px; !* Adjust logo size *!
-}
-
-.navbar-nav .nav-link {
-    color: black !important; !* Black text *!
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #FF6600 !important; !* Orange hover effect *!
-}
-
-
-!* === Navigation Bar === *!
-nav {
-    background-color: black;
-    padding: 10px;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    display: inline-block;
-    font-weight: bold;
-}
-
-nav a:hover {
-    background-color: #FF6600; !* Orange *!
-    border-radius: 5px;
-}
-*/
-
-/* === Hero Section === */
-/* Hero Section */
 .hero-section {
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
     position: relative;
+    width: 100%;
+    height: 70vh; /* Full viewport height */
+    background: no-repeat center center/cover;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Overlay for better text visibility */
 .hero-overlay {
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
 }
 
-/* Hero Content */
 .hero-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
-    color: white;
-    margin-bottom: 15px;
+    color: #C5C5C5; /* Silver */
 }
 
 .brand-name {
-    color: #ff6600; /* Brand Orange */
+    color: #7C7C7C; /* Boulder Gray */
 }
 
 .hero-text {
-    font-size: 1.3rem;
-    color: #ddd;
-    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #C5C5C5; /* Silver */
+    margin-top: 10px;
 }
 
-/* Button Styling */
 .hero-button {
-    background-color: #ff6600;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
+    margin-top: 20px;
     padding: 12px 24px;
+    font-size: 1rem;
+    color: #060606; /* Black */
+    background-color: #C5C5C5; /* Silver */
     border: none;
     border-radius: 5px;
-    transition: background 0.3s ease-in-out;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 
 .hero-button:hover {
-    background-color: #e65c00;
+    background-color: #7C7C7C; /* Boulder Gray */
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+    }
+
+    .hero-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/*Why Choose Assets91 Section Starts*/
+/* Why Choose Assets91 Section */
+.why-choose-section {
+    background-color: #060606;
+    color: #C5C5C5;
+    padding: 80px 20px;
+}
+
+.why-choose-section .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #C5C5C5;
+}
+
+/* Features Container */
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Makes it responsive */
+    gap: 40px;
+}
+
+/* Feature Card */
+.feature-card {
+    background-color: #7C7C7C;
+    border-radius: 10px;
+    padding: 30px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Feature Icon */
+.feature-icon {
+    font-size: 3rem;
+    color: #060606;
+    margin-bottom: 20px;
+}
+
+/* Feature Title */
+.feature-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #060606;
+}
+
+/* Feature Description */
+.feature-card p {
+    font-size: 1rem;
+    color: #C5C5C5;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
+    .features {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .hero-text {
-        font-size: 1.1rem;
-    }
-
-    .hero-button {
-        font-size: 1rem;
-        padding: 10px 20px;
+    .feature-card {
+        width: 80%;
+        margin-bottom: 20px;
     }
 }
 
-.hero-section {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 60vh; /* Adjust the height as needed */
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.hero-overlay {
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay for better readability */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 
-/*Features Section*/
-/* === Features Section === */
+/*Why Choose Assets91 Section Ends*/
+
+
+/*Features Section Starts*/
+
+
 .features-section {
-    padding: 50px 0;
-    text-align: center;
-    background-color: white; /* Background color for better visibility */
+    background-color: #060606;
+    color: #C5C5C5;
+    padding: 80px 20px;
 }
 
-.features-section h2 {
-    color: #000000; /* Black */
+.section-title {
+    font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 10px;
-    text-align: -webkit-left;
+    margin-bottom: 20px;
+    color: #C5C5C5;
 }
 
-.features-section p {
-    color: #333;
+.section-subtitle {
     font-size: 1.2rem;
-    margin-bottom: 30px;
-    text-align: -webkit-left;
+    margin-bottom: 40px;
+    color: #7C7C7C;
 }
 
-/* === Image Styling === */
-.image-container {
+.features-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-}
-
-.features-image {
-    max-width: 90%;
-    height: auto;
-    object-fit: contain;
-}
-
-/* === Responsive Design === */
-@media (max-width: 768px) {
-    .features-image {
-        max-width: 100%;
-    }
-}
-
-/*Feature Section Ends here*/
-
-/* === Advantage Section === */
-.advantages-section {
-    padding: 60px 0;
-    background-color: #F4F4F4; /* Light Grey Background */
-}
-
-.display-4.text-orange {
-    color: #000000; /* Orange heading */
-    font-weight: bold;
-}
-
-.advantage-card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.advantage-card:hover {
-    transform: translateY(-5px);
-}
-
-.advantage-icon {
-    font-size: 40px;
-    color: #FF6600; /* Orange icons */
-    margin-bottom: 15px;
-}
-
-.advantage-card h4 {
-    color: black;
-    font-weight: bold;
-}
-
-.advantage-card p {
-    color: #333;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .advantage-card {
-        margin-bottom: 20px;
-    }
-}
-
-/*Advantage Section Ends here*/
-
-/* === Key Metrics Section === */
-.key-metrics-section {
-    padding: 60px 0;
-    background-color: white; /* White background */
-}
-
-.metric-card {
-    background-color: #F4F4F4; /* Light Grey */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.metric-card:hover {
-    transform: translateY(-5px);
-}
-
-.metric-icon {
-    font-size: 40px;
-    color: #FF6600; /* Orange icons */
-    margin-bottom: 15px;
-}
-
-.metric-card h4 {
-    color: black;
-    font-weight: bold;
-}
-
-.metric-card p {
-    color: #333;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .metric-card {
-        margin-bottom: 20px;
-    }
-}
-
-/*KeyMetrics Section Ends here*/
-
-.clients-section {
-    padding: 50px 0;
-    background-color: #f9f9f9;
-}
-
-.clients-section h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #ff6600; /* Brand orange */
-    margin-bottom: 10px;
-}
-
-.clients-section .sub-title {
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-/* Grid Layout */
-.clients-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
-}
-
-/* Client Box */
-.client-card {
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 120px; /* Fixed height for uniformity */
-}
-
-/* Logo Styling */
-.client-logo {
-    max-width: 100%;
-    max-height: 80px;
-    object-fit: contain; /* Ensures logos fit within the box */
-}
-
-/* === Roadmap Section === */
-.roadmap-section {
-    padding: 60px 0;
-    background-color: #F9F9F9; /* Light Grey */
-}
-
-/* Grid Layout for Roadmap */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 24px;
-    justify-content: center;
-    align-items: center;
+    gap: 30px;
     margin-top: 40px;
 }
 
-/* Roadmap Card */
-.roadmap-card {
-    background: linear-gradient(to right, #FF6600, #FF4500);
+.feature-card {
+    background-color: #7C7C7C;
+    border-radius: 10px;
     padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
 }
 
-.roadmap-card:hover {
+.feature-card:hover {
     transform: scale(1.05);
 }
 
-/* Icons */
-.icon-wrapper {
-    background: white;
-    padding: 12px;
-    border-radius: 50%;
-    display: inline-block;
+.feature-card .feature-icon {
+    margin-bottom: 20px;
+    font-size: 4rem;
+    opacity: 0;
+    animation: iconAnimation 1s ease-out forwards;
 }
 
-.roadmap-icon {
-    width: 64px;
-    height: 64px;
-}
-
-/* Step Title */
-.step-title {
+.feature-card .feature-title {
+    font-size: 1.5rem;
     font-weight: bold;
-    font-size: 18px;
-    color: #333;
-    margin-top: 10px;
+    color: #060606;
+    margin-bottom: 15px;
 }
 
-/* Step Description */
-.step-desc {
-    font-size: 14px;
-    color: #666;
+.feature-card .feature-description {
+    font-size: 1rem;
+    color: #060606;
 }
 
-/* Responsive */
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animated icon animation */
+@keyframes iconAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Specific icon animation delays for each feature */
+.feature-icon.icon-1 {
+    background: url('https://img.icons8.com/ios/452/cost.png') no-repeat center center;
+    background-size: 80%;
+    animation-delay: 0.3s;
+}
+
+.feature-icon.icon-2 {
+    background: url('https://img.icons8.com/ios/452/maintenance.png') no-repeat center center;
+    background-size: 80%;
+    animation-delay: 0.6s;
+}
+
+.feature-icon.icon-3 {
+    background: url('https://img.icons8.com/ios/452/earth.png') no-repeat center center;
+    background-size: 80%;
+    animation-delay: 0.9s;
+}
+
+.feature-icon.icon-4 {
+    background: url('https://img.icons8.com/ios/452/smartphone.png') no-repeat center center;
+    background-size: 80%;
+    animation-delay: 1.2s;
+}
+
+.feature-icon.icon-5 {
+    background: url('https://img.icons8.com/ios/452/government-building.png') no-repeat center center;
+    background-size: 80%;
+    animation-delay: 1.5s;
+}
+
+.feature-icon.icon-6 {
+    background: url('https://img.icons8.com/ios/452/incentives.png') no-repeat center center;
+    background-size: 80%;
+    animation-delay: 1.8s;
+}
+
+/* Responsive design for smaller screens */
 @media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
+    .features-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-card {
+        width: 90%;
+        margin-bottom: 30px;
     }
 }
 
 @media (max-width: 480px) {
-    .grid-container {
-        grid-template-columns: repeat(1, 1fr);
+    .feature-card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .feature-icon {
+        font-size: 3rem;
+    }
+
+    .feature-title {
+        font-size: 1.3rem;
+    }
+
+    .feature-description {
+        font-size: 0.9rem;
     }
 }
 
 
-/*About Section Starts here*/
-.about-section {
-    padding: 50px 0;
+/*Features Section Ends here */
+
+/* Clients Section */
+.clients-section {
+    padding: 80px 20px;
+    background-color: #060606;
+    color: #C5C5C5;
 }
 
-.about-section h2 {
-    color: #FF6600; /* Orange */
+.clients-section .display-4 {
+    font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 20px;
+    color: #C5C5C5;
 }
 
-.founders {
-    text-align: center;
+.clients-section .sub-title {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: #7C7C7C;
 }
 
-.founders-title {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #000;
-    font-weight: bold;
-}
-
-/* Ensure this block is correctly closed */
-.founders-container {
+/* Clients Grid */
+.clients-grid {
     display: flex;
     justify-content: center;
-    gap: 50px; /* Space between the founders */
-    flex-wrap: wrap; /* Makes it responsive */
-}  /* This closing brace might be missing! */
-
-/* Ensure this block is also correctly closed */
-.founder-profile {
-    text-align: center;
-    max-width: 350px;
-}  /* Make sure this closing brace is present! */
-
-/* Founder Image */
-.founder-image {
-    width: 150px; /* Adjust image size */
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #FF6600;
-}  /* Check this closing brace */
-
-/*About Section Ends here*/
-
-/* === Contact Us Section === */
-.contact-section {
-    padding: 60px 0;
-    background: #F9F9F9;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 32px;
-    color: #FF6600;
-    font-weight: bold;
-}
-
-.subtitle {
-    text-align: center;
-    color: #666;
-    margin-bottom: 40px;
-}
-
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-}
-
-/* Contact Section */
-.contact-section {
-    background-color: #ffffff;
-    padding: 4rem 0;
-}
-
-/* Get in Touch Form */
-.contact-form {
-    margin-bottom: 50px;
-    background-color: #f3f4f6;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form h2 {
-    text-align: center;
-    color: #ff6600;
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    text-decoration: underline;
-}
-
-.contact-form label {
-    font-weight: bold;
-    color: #333;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 0.75rem;
-    margin-top: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.contact-form button {
-    width: 100%;
-    background-color: #ff6600;
-    color: white;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.contact-form button:hover {
-    background-color: #e65c00;
-}
-
-/* Office Locations */
-.offices-container {
-    margin-top: 3rem;
-}
-
-.office-box {
-    display: flex;
     align-items: center;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.office-box svg {
-    font-size: 2rem;
-    color: #ff6600;
-    margin-right: 1rem;
-}
-
-.our-offices-heading {
-    font-size: 28px; /* Adjust as needed */
-    font-weight: bold;
-    color: #FFA500; /* Your brand's orange color */
-    text-transform: uppercase;
-    border-bottom: 3px solid #FFA500; /* Highlight effect */
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-
-
-/* Contact Info */
-.contact-info {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
-.contact-info .info-box {
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 48%;
+/* Client Card */
+.client-card {
+    text-align: center;
 }
 
-.contact-info .info-box svg {
-    font-size: 1.8rem;
-    color: #ff6600;
-    margin-right: 1rem;
+/* Enlarged Logo Styling */
+.client-logo {
+    width: 250px; /* Larger size since there's only one client */
+    height: auto;
+    background-color: #fff; /* White background */
+    border-radius: 15px; /* Curved edges */
+    padding: 30px; /* Extra padding for a larger logo */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for the logo */
+.client-logo:hover {
+    transform: translateY(-8px); /* Slight lift when hovered */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .contact-info {
+    .clients-grid {
         flex-direction: column;
         align-items: center;
     }
 
-    .contact-info .info-box {
-        width: 100%;
-        margin-bottom: 1rem;
+    .client-logo {
+        width: 180px; /* Adjust for smaller screen */
+        padding: 20px; /* Adjust padding */
     }
-
-    .office-box {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .office-box svg {
-        font-size: 2rem;
-        color: #ff6600;
-    }
-
 }
 
-.faq-section {
-    background-color: #f9f9f9;
-    padding: 50px 20px;
+
+
+
+
+
+
+
+
+/*Business Partner Section Starts*/
+
+.business-partner-section {
+    background-color: #060606;
+    color: #C5C5C5;
+    padding: 80px 20px;
+    margin-top: -2px;
 }
 
-.faq-item {
-    width: 100%;
-    transition: all 0.3s ease-in-out;
+.business-partner-section .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #C5C5C5;
 }
 
-.faq-item button {
-    cursor: pointer;
-    text-align: left;
+.business-partner-section .section-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #7C7C7C;
+}
+
+/* Roadmap container */
+.roadmap {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Makes the roadmap responsive */
+    gap: 20px; /* Space between items */
+    width: 90%; /* Make the roadmap take up a bit more space */
+    margin: 0 auto;
 }
 
-.faq-item:hover {
-    background-color: #f8f8f8;
+/* Roadmap Step */
+.roadmap-step {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 1s ease-out forwards;
+    width: 200px;  /* Medium size */
 }
 
-.faq-list {
-    max-width: 1000px; /* Adjust width to fit the screen */
-    margin: auto;
+/* Step Box */
+.roadmap-box {
+    background-color: #C5C5C5;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 1s ease-out forwards;
+    width: 120px;  /* Medium size */
+    height: 120px;  /* Medium size */
+    margin: 0 auto 15px; /* Center the box within each step */
 }
 
-@media (max-width: 768px) {
-    .faq-item button {
-        font-size: 1rem;
-        padding: 12px;
+/* Icons inside the Box */
+.roadmap-icon {
+    font-size: 3rem; /* Larger icon size */
+    color: #060606;
+}
+
+/* Fade-in and Slide-up Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-/* === Responsive Design === */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation delays */
+.roadmap-step.step-1 {
+    animation-delay: 0.5s;
+}
+
+.roadmap-step.step-2 {
+    animation-delay: 1s;
+}
+
+.roadmap-step.step-3 {
+    animation-delay: 1.5s;
+}
+
+.roadmap-step.step-4 {
+    animation-delay: 2s;
+}
+
+.roadmap-step.step-5 {
+    animation-delay: 2.5s;
+}
+
+/* Responsive design */
 @media (max-width: 768px) {
-    .contact-container {
+    .roadmap {
         flex-direction: column;
         align-items: center;
+        gap: 30px; /* Increased space between elements for mobile */
     }
 
-    .contact-form,
-    .office-list {
-        max-width: 100%;
+    .roadmap-step {
+        width: 100%;
+        max-width: 300px; /* Limit the max width on mobile */
+        margin: 0 auto;
+    }
+
+    .roadmap-box {
+        padding: 20px;
+        width: 90px; /* Adjust box size for mobile */
+        height: 90px; /* Adjust box size for mobile */
+    }
+
+    .roadmap-icon {
+        font-size: 2.5rem; /* Adjust icon size for mobile */
     }
 }
 
-/* === Footer === */
-/* === Footer Styles === */
-.footer {
-    background: #222;
-    color: white;
-    padding: 50px 0 20px;
+/*Business Partner Section Ends*/
+
+/* Contact Us Section */
+.contact-us-section {
+    background-color: #000000;
+    padding: 60px 20px;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+.contact-us-section h2 {
+    font-size: 2.5rem;
+    color: #C5C5C5;
+    margin-bottom: 20px;
 }
 
-/* === Footer Grid Layout === */
-.footer-grid {
+.contact-us-section p {
+    font-size: 1.2rem;
+    color: #C5C5C5;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+/* Container for contact details */
+.contact-details {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 30px;
+    justify-content: space-around; /* Distribute items evenly */
+    align-items: center; /* Align items vertically */
+    gap: 40px; /* Add space between the items */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
-/* === Left - Logo & About === */
-.footer-logo {
-    flex: 1;
-    max-width: 30%;
+/* Style for each contact item */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+    color: #ccc5c5;
 }
 
-.footer-logo .logo {
-    width: 150px;
+.contact-icon {
+    font-size: 2rem;
+    color: #C5C5C5;
+}
+
+.contact-text {
+    font-size: 1rem;
+    color:#C5C5C5;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .contact-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-item {
+        margin-bottom: 20px; /* Add spacing between items on smaller screens */
+    }
+}
+
+
+.about-section {
+    background-color: #fff;
+    padding: 80px 20px;
+}
+
+.about-section .display-4 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #060606;
+}
+
+.founders {
+    margin-top: 50px;
+}
+
+.founders-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Makes the layout responsive */
+}
+
+.founder-profile {
+    background-color: #C5C5C5;
+    border-radius: 10px;
+    padding: 40px;
+    width: 350px; /* Larger and wider */
+    height: 400px; /* Increased height */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.founder-profile:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.founder-image {
+    width: 120px; /* Larger image size */
+    height: 120px; /* Larger image size */
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid #060606;
+    transition: transform 0.3s ease;
+}
+
+.founder-image:hover {
+    transform: scale(1.1);
+}
+
+.founder-profile h4 {
+    font-size: 1.8rem; /* Increased font size */
+    font-weight: 600;
+    color: #060606;
     margin-bottom: 15px;
 }
 
-.footer-about {
-    font-size: 14px;
-    color: #ddd;
+.founder-profile p {
+    font-size: 1.1rem; /* Slightly larger text */
+    color: #7C7C7C;
 }
 
-/* === Middle - Quick Links === */
-.footer-links {
-    flex: 1;
-    max-width: 25%;
-}
-
-.footer-links h3 {
-    font-size: 18px;
-    color: #FF6600;
-    margin-bottom: 10px;
-}
-
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links ul li {
-    margin-bottom: 8px;
-}
-
-.footer-links ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s;
-}
-
-.footer-links ul li a:hover {
-    color: #FF6600;
-}
-
-/* === Right - Social Media === */
-.footer-social {
-    flex: 1;
-    max-width: 25%;
-}
-
-.footer-social h3 {
-    font-size: 18px;
-    color: #FF6600;
-    margin-bottom: 10px;
-}
-
-.social-icons {
-    display: flex;
-    gap: 15px;
-}
-
-.social-icons a {
-    color: white;
-    font-size: 20px;
-    transition: color 0.3s;
-}
-
-.social-icons a:hover {
-    color: #FF6600;
-}
-
-/* === Bottom Copyright === */
-.footer-bottom {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 14px;
-    color: #bbb;
-}
-
-/* === Responsive Design === */
 @media (max-width: 768px) {
-    .footer-grid {
+    .founders-container {
         flex-direction: column;
-        text-align: center;
         align-items: center;
     }
 
-    .footer-logo, .footer-links, .footer-social {
-        max-width: 100%;
+    .founder-profile {
+        width: 80%;
+        height: auto; /* Auto height for smaller screens */
+        margin-bottom: 20px;
     }
 
-    .social-icons {
-        justify-content: center;
+    .founder-image {
+        width: 100px;
+        height: 100px;
     }
 }
 
 
-/* === Card Component === */
-.card {
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-}
 
-/* === Links === */
-a {
-    color: #FF6600; /* Orange */
-    text-decoration: none;
-}
 
-a:hover {
-    color: black;
-}
 
-/* === Sections === */
-.section {
-    padding: 50px;
-    background-color: #F4F4F4; /* Ash Grey */
+
+
+
+
+
+
+
+/* Footer Section */
+.footer-section {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 40px 20px;
     text-align: center;
 }
 
-.section h2 {
-    color: #FF6600; /* Orange */
+.footer-logo-img {
+    max-width: 150px; /* Adjust logo size */
+    margin-bottom: 20px;
 }
 
-/* === Forms === */
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-input:focus, textarea:focus {
-    border-color: #FF6600; /* Orange */
-    outline: none;
-}
-
-/* === Responsive Design === */
-@media (max-width: 768px) {
-    nav a {
-        display: block;
-        margin: 5px 0;
-    }
-
-    .card {
-        width: 90%;
-        margin: auto;
-    }
-}
-.faq-section {
-    background-color: #f9f9f9;
-    padding: 50px 20px;
-}
-
-.faq-list {
-    width: 100%;
-    max-width: 1000px; /* Ensures it fits well on wider screens */
-    margin: auto;
-}
-
-.faq-item {
-    width: 100%;
-    transition: all 0.3s ease-in-out;
-    border: none; /* Removes any existing outline */
-    background: none; /* Ensures no background */
-}
-
-.faq-item button {
-    width: 100%;
-    text-align: left;
+.footer-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    cursor: pointer;
-    padding: 15px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    background: none;
-    border: none;
-    outline: none;
 }
 
-.faq-item:hover {
-    background-color: transparent; /* Removes hover background */
+.footer-contact-info p {
+    margin: 5px 0;
 }
 
-/* Mobile View */
+.footer-icon {
+    color: black; /* Set icon color to black */
+    margin-right: 10px; /* Add space between icon and text */
+    font-size: 1.2rem; /* Adjust icon size */
+}
+
+.footer-copyright {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #7C7C7C;
+}
+
+@media (min-width: 768px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: left;
+    }
+
+    .footer-logo {
+        margin-right: 20px;
+    }
+
+    .footer-contact-info {
+        text-align: left;
+        color: #060606;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    color: #000000;
+    padding: 40px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+/* Responsive adjustments for small screens */
 @media (max-width: 768px) {
-    .faq-list {
-        max-width: 100%;
-        padding: 0 15px;
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
     }
 
-    .faq-item button {
-        font-size: 1rem;
-        padding: 12px;
+    .hero-section {
+        height: auto; /* Let hero section resize */
+    }
+
+    .container {
+        padding: 20px; /* Avoid overflow on small screens */
+    }
+
+    .roadmap, .founders-container, .clients-grid {
+        flex-direction: column; /* Stack items vertically */
     }
 }
+

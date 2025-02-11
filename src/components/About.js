@@ -6,16 +6,10 @@ const About = () => {
     return (
         <section id="about" className="about-section bg-white py-5">
             <div className="container">
-                <h2 className="display-4 text-center">About Us</h2>
-                <p className="lead text-center">
-                    EVeez is a proprietary brand of TravelTech Experiences Pvt. Ltd., one of the pioneers in
-                    Electric Vehicle subscription ecosystems in India. TravelTech is an initiative of a team
-                    led by sensitive and passionate individuals who are driven by technology and sustainability.
-                </p>
+                <h2 className="display-4 text-center">Our Founders</h2>
 
                 {/* Founders Section */}
                 <div className="founders text-center mt-5">
-                    <h3 className="founders-title">Meet Our Founders</h3>
                     <div className="founders-container">
                         <div className="founder-profile">
                             <img src={GauravImage} alt="Gaurav Rathore" className="founder-image" />
