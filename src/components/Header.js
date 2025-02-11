@@ -7,7 +7,7 @@ const Header = () => {
         <header className="navbar navbar-expand-lg navbar-dark fixed-top">
             <div className="container">
                 <a className="navbar-brand" href="#home">
-                    <img src={logo} alt="EVeez Logo" height="50" />
+                    <img src={logo} alt="EVeez Logo" height="50"/>
                 </a>
                 <button
                     className="navbar-toggler"
@@ -20,6 +20,7 @@ const Header = () => {
                 >
                     <span className="navbar-toggler-icon"></span>
                 </button>
+
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item"><a className="nav-link" href="#home">Home</a></li>
