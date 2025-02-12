@@ -11,7 +11,7 @@ const ContactUs = () => {
                 <div className="contact-details">
                     <div className="contact-item">
                         <FaEnvelope className="contact-icon" />
-                        <span className="contact-text">info@eveez.com</span>
+                        <span className="contact-text">write.assets91@gmail.com</span>
                     </div>
                     <div className="contact-item">
                         <FaPhoneAlt className="contact-icon" />
